@@ -1,0 +1,88 @@
+/* --- GENERAL STYLES --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* --- HEADER (Flexbox) --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4b6cb7;
+    color: white;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* --- GRID LAYOUT --- */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* --- FLOATED IMAGE --- */
+.float-img {
+    float: left;
+    margin: 0 1rem 1rem 0;
+    width: 200px;       /* smaller width */
+    max-width: 100%;    /* prevent overflow */
+    height: auto;       /* keeps proportions */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* --- SIDEBAR + EXTRA INFO --- */
+aside, .extra-info {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* --- FOOTER --- */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .float-img {
+        float: none;
+        display: block;
+        margin: 0 auto 1rem;
+        width: 70%;  /* smaller on mobile */
+    }
+}
